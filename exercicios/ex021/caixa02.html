@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: lightskyblue;
+        }
+        
+        h1, h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p, h2 {
+            margin: 0px;
+        }
+        
+        header > h1 {
+            text-align: center;
+            color: midnightblue;
+        }
+        header {
+            background-color: rgb(206, 237, 247);
+            border-radius: 10px;
+            padding: 0 0 10px 15px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+        }
+        nav {
+            background-color: rgb(6, 8, 230, 0.162);
+            width: 150px;
+            padding:  3px 2px 3px 5px;
+            border-radius: 1px 8px;
+        }
+        
+        nav:hover > a {
+            
+            color: red;
+            font-weight: bold;
+        }
+        
+        main {
+            background-color: rgb(206, 237, 247);
+            padding: 10px;
+            margin: 10px 0px;
+            
+        }
+        article#txtPrincipal {
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 8px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        article#txtPrincipal > p {
+            text-indent: 20px;
+            text-align: justify;
+            padding-top: 2px;
+        }
+        
+        section#assuntos > p {
+            font-weight: bold;
+        }
+        
+        aside > p {
+            text-align: right;
+        }
+        
+        footer > p {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="assuntos">
+            <p>Esporte, política e tecnologia</p>
+        </section>
+        
+        <section>
+            <article id="txtPrincipal">
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et interdum ipsum, sed malesuada erat. Curabitur congue diam sed mi vulputate condimentum. Donec est nisi, viverra id erat quis, fermentum tempus nulla. Suspendisse condimentum scelerisque magna, a pellentesque dui varius nec.</p>
+                <aside>
+                    <p>Artigo escríto por José da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Desenvolvido por Jean Vinicius.</p>
+    </footer>
+</body>
+</html>
