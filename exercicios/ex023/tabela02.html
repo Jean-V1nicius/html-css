@@ -10,10 +10,37 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
         }
-
+        
         table {
             border-collapse: collapse;
             width: 500px;
+            position: relative;
+        }
+
+        caption {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 8px;
+        }
+
+        thead, tfoot {
+            background-color: rgb(79, 79, 79);
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            background-color: rgb(79, 79, 79);
+            top: -1px;
+        }
+
+        tbody tr:nth-child(odd) { /* odd = ímpar = 2n-1 */
+            background-color: white;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) { /* even = par = 2n */
+            background-color: lightgray;
         }
 
         th, td {
@@ -21,9 +48,12 @@
             padding: 10px;
         }
 
-        thead, tfoot {
-            background-color: gray;
-            color: white;
+        th#populaçao {
+            width: 150px;
+        }
+
+        td.numero {
+            text-align: right;
         }
     </style>
 </head>
@@ -31,6 +61,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!-- Anatomia para TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR TH TD
             TBODY
@@ -38,10 +69,11 @@
             TFOOT
                 TR TH TD -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>estado</th>
-                <th>população</th>
+                <th scope="col">estado</th>
+                <th id="populaçao" scope="col">população</th>
             </tr>
         </thead>
         <tbody>
@@ -156,14 +188,27 @@
         </tbody>
         <tfoot>
             <tr>
-                <th >Total de habitantes</th>
-                <td>000000</td>
+                <th scope="row">Total de habitantes</th>
+                <td id="total" class="numero"></td>
             </tr>
         </tfoot>
     </table>
 
     <script>
-        console.log('Oi')
+        var populaçao = window.document.querySelectorAll('td.numero')
+        var total = 0
+
+        for (var i = 0; i < 27; i++) {
+            var numero = Number(populaçao[i].textContent.replaceAll(' ', ''))
+            total += numero
+        }
+
+        total_part_one = String(total).substring(0, 3)
+        total_part_second = String(total).substring(3, 6)
+        total_part_third = String(total).substring(6, 9)
+        total = `${total_part_one} ${total_part_second} ${total_part_third}`
+
+        window.document.querySelector('td#total').innerHTML = `<strong>${total}</strong>`
     </script>
 </body>
 </html>
