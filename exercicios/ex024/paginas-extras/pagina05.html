@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <a id="lk_click" href="#">Clique em min...</a>
+    <div id="exibir_resu"></div>
+
+    <script>
+        var lk_click = window.document.querySelector("a#lk_click")
+        lk_click.addEventListener('click', clicar)
+
+        function clicar() {
+            var exibir_resu = window.document.querySelector("div#exibir_resu")
+
+            exibir_resu.innerHTML += "<p>Você clicou!</p>"
+        }
+    </script>
+</body>
+</html>
