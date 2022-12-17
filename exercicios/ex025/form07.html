@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="" method="post" autocomplete="on">
+        <p>
+            <label for="iEstado">Estado</label>
+            <select name="estado" id="iEstado">
+                <option value="" selected>--- Escolha ---</option>
+
+                <optgroup label="This estados">
+                    <option value="PA">Pará</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Other estados">
+                    <option value="SP">São Paulo</option>
+                    <option value="PE">Pernambuco</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="profissao">Profissão</label>
+            <input type="text" name="profissao" id="profissao" list="list_profissao">
+            <datalist id="list_profissao">
+                <option value="Administrador">ADM</option>
+                <option value="Contabilista">CONT</option>
+                <option value="Desenvolvedor">DEV</option>
+                <option value="Professor">PROF</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="iMsg">Messagem: </label> <br>
+            <textarea name="msg" id="iMsg" cols="30" rows="7"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
