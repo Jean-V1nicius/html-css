@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="" method="get" autocomplete="on">
+        <p>
+            <label for="iNumber1">Number 1: </label>
+            <input type="number" name="number1" id="iNumber1" min="0" max="100" oninput="iSoma.innerHTML = Number(iNumber1.value) + Number(iNumber2.value)">
+        </p>
+        <p>
+            <label for="iNumber2">Number 1: </label>
+            <input type="number" name="number2" id="iNumber2" min="0" max="100" oninput="iSoma.innerHTML = Number(iNumber1.value) + Number(iNumber2.value)">
+        </p>
+        <p>
+            <label for="iSoma">Soma: </label>
+            <output id="iSoma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
