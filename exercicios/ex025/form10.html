@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="" method="get" autocomplete="on">
+        <p>
+            <label for="iYear">Em que year you nasceu? </label>
+            <input type="number" name="year" id="iYear" min="1902" max="2022" value="2000" oninput="calcular_idade()">
+        </p>
+        <p>
+            <label for="i_idade">Idade: </label>
+            <output id="i_idade" >0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        let year_atual = new Date().getFullYear()
+        i_idade.innerHTML = year_atual - Number(iYear.value)
+        
+        function calcular_idade() {
+            let year_atual = new Date().getFullYear()
+            i_idade.innerHTML = year_atual - Number(iYear.value)
+        }
+    </script>
+</body>
+</html>
