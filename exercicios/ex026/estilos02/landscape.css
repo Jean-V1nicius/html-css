@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+/* CSS landscape */
+body {
+    background: lightgreen url("../imagens/cev-landscape.jpg") left bottom;
+}

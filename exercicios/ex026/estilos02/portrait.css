@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+/* CSS portrait */
+body {
+    background: aqua url("../imagens/cev-portrait.jpg") center bottom;
+}
