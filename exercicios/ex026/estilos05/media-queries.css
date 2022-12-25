@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* Mobile First */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     body {
-        height: 118vh;
+        position: relative;
     }
     
     header h1 {
@@ -15,7 +15,6 @@
         display: inline-block;
         color: white;
         padding: 10px;
-        cursor: pointer;
         margin-bottom: 8px;
     }
 
@@ -29,8 +28,36 @@
         transition: background-color .2s;
     }
 
-    menu {
+    section#backgroundMenu {
+        position: absolute;
         display: none;
+        
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: rgba(189, 189, 189, 0.6);
+    }
+
+    menu {
+        position: absolute;
+        display: none;
+        
+
+        top: 0px;
+        left: 0px;
+        width: 250px;
+        height: 100vh;
+
+        background-color: var(--cor02);
+    }
+
+    menu h1 {
+        font-family: var(--font-titulo);
+        padding: 10px;
+        color: white;
+        text-align: left;
     }
 
     menu > ul li {

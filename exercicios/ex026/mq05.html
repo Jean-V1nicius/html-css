@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="estilos05/media-queries.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body onresize="resizeView()">
     <header>
-        <h1>Meu site</h1>
+        <h1 id="tituloSite" >Meu site</h1>
         <span id="iconMenu" class="material-icons" onclick="exbirMenu()">&#xe5d2</span>
+        <section id="backgroundMenu" onclick="ocultarMenu()"></section>  
         <menu id="menu">
-            <ul>
-                <li><a href="#">opção 1</a></li>
-                <li><a href="#">opção 2</a></li>
-                <li><a href="#">opção 3</a></li>
-                <li><a href="#">opção 4</a></li>
-                <li><a href="#">opção 5</a></li>
+            <ul id="ulMenu">
+                <li><a id="linkMenu01" href="#">opção 1</a></li>
+                <li><a id="linkMenu02" href="#">opção 2</a></li>
+                <li><a id="linkMenu03" href="#">opção 3</a></li>
+                <li><a id="linkMenu04" href="#">opção 4</a></li>
+                <li><a id="linkMenu05" href="#">opção 5</a></li>
             </ul>
         </menu>
+        
     </header>
     <main>
         <article>
@@ -34,16 +36,6 @@
         </article>
     </main>
 
-    <script>
-        function exbirMenu() {
-            var menu = window.document.querySelector("menu#menu")
-
-            if (menu.style.display == "none") {
-                menu.style.display = "block"
-            } else {
-                menu.style.display = "none"
-            }
-        }
-    </script>
+    <script src="script05.js"></script>
 </body>
 </html>
