@@ -29,7 +29,7 @@
     }
 
     section#backgroundMenu {
-        position: absolute;
+        position: fixed;
         display: none;
         
         top: 0px;
@@ -41,7 +41,7 @@
     }
 
     menu {
-        position: absolute;
+        position: fixed;
         display: none;
         
 
@@ -86,5 +86,6 @@
 
     main {
         width: 90vw;
+        margin-bottom: 40px;
     }
 }
