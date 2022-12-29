@@ -5,30 +5,42 @@
     body {
         position: relative;
     }
+
+    header {
+        position: relative;
+        height: 120px;
+    }
     
-    header h1 {
-        padding: 15px;
-        margin-bottom: 10px;
+    header > h1 {
+        position: absolute;
+        display: inline-block;
+        top: 15px;
+        left: 60px;
     }
 
     span#iconMenu {
-        display: inline-block;
+        position: absolute;
+        display: block;
         color: white;
+
         padding: 10px;
-        margin-bottom: 8px;
+        font-size: 30px;
+        
+        top: 25px;
+        left: 10px;
     }
 
     span#iconMenu:hover {
-        background-color: rgba(255, 255, 255, 0.073);
+        background-color: rgba(255, 255, 255, 0.137);
         border-radius: 50%;
+        cursor: pointer;
     }
 
     span#iconMenu:active {
-        background-color: rgba(255, 255, 255, 0.434);
-        transition: background-color .2s;
+        background-color: rgba(255, 255, 255, 0.457);
     }
 
-    section#backgroundMenu {
+    div#backgroundMenu {
         position: fixed;
         display: none;
         
@@ -38,19 +50,36 @@
         height: 100vh;
 
         background-color: rgba(189, 189, 189, 0.6);
+        animation: opacidadeBackgroundMenu 0.3s;
+    }
+
+    @keyframes opacidadeBackgroundMenu {
+        from { opacity: 0%}
+        to { opacity: 100%;}
     }
 
     menu {
         position: fixed;
         display: none;
-        
+        overflow: auto;
 
         top: 0px;
         left: 0px;
-        width: 250px;
+        width: 55vw;
+        min-width: 152px;
         height: 100vh;
 
-        background-color: var(--cor02);
+        background-color: var(--cor05);
+    }
+
+    @keyframes entradaMenu {
+        from { transform: translateX(-100%);}
+        to { transform: translateX(0%);}
+    }
+
+    @keyframes saidaMenu {
+        from { transform: translateX(0%);}
+        to { transform: translateX(-100%);}
     }
 
     menu h1 {
@@ -66,18 +95,24 @@
     
     menu > ul a {
         display: block;
-        background-color: var(--cor04);
-        color: white;
-        border-top: 1px solid white;
-        padding: 10px;
-
         font-weight: bold;
         text-decoration: none;
         text-align: center;
+        cursor: default;
+
+        background-color: var(--cor04);
+        border-radius: 15px 15px 0px 0px;
+        border-top: 1px solid white;
+        color: white;
+
+        max-width: 250px;
+        margin: 8px auto;
+        padding: 15px;
     }
 
     menu > ul a:hover {
         background-color: var(--cor02);
+        cursor: pointer;
     }
 
     menu > ul a:active {
