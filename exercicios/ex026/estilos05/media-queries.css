@@ -124,3 +124,38 @@
         margin-bottom: 40px;
     }
 }
+
+@media screen and  (min-width: 769px) {
+    header {
+        background-image: linear-gradient(to bottom, var(--cor04) 25%, var(--cor06));
+        border-bottom: 5px solid var(--cor04);
+    }
+
+    menu ul {
+        font-size: 0px;
+    }
+
+    menu > ul li {
+        display: inline-block;
+    }
+
+    menu > ul a {
+        display: block;
+        color: white;
+        text-decoration: none;
+
+        padding: 10px;
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    menu > ul a:hover {
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0.283), transparent 65%);
+        border-bottom: 4px solid rgba(255, 255, 255, 0.29);
+    }
+
+    main {
+        /* width: 715px; */
+        max-width: 750px;
+    }
+}
